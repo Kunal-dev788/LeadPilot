@@ -1,5 +1,5 @@
+import { Logo } from "../shared/logo";
 import { AuthHero } from "./auth-hero";
-import { AuthLogo } from "./auth-logo";
 import { SignInFloatingPanels } from "./signin-floating-panels";
 import { SignInTestimonial } from "./signin-testimonial";
 
@@ -14,7 +14,7 @@ export function SignInLeftPanel() {
 
       <div className="relative z-10 flex h-full flex-col">
         {/* LOGO */}
-        <AuthLogo />
+        <Logo />
 
         {/* HERO */}
         <div className="mt-16">

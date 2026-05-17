@@ -1,4 +1,4 @@
-import { AuthLogo } from "./auth-logo";
+import { Logo } from "../shared/logo";
 import { AuthHero } from "./auth-hero";
 import { SignUpFloatingCards } from "./signup-floating-cards";
 import { SignUpTestimonial } from "./signup-testimonial";
@@ -14,7 +14,7 @@ export function SignUpLeftPanel() {
 
       <div className="relative z-10 flex h-full flex-col">
         {/* TOP */}
-        <AuthLogo />
+        <Logo />
 
         {/* HERO */}
         <div className="mt-14">
