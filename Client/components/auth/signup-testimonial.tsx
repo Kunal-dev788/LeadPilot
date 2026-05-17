@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export function AuthTestimonial() {
+export function SignUpTestimonial() {
   return (
     <div className="max-w-130 rounded-3xl border border-white/10 bg-white/3 p-5 backdrop-blur-xl">
       {/* Content */}

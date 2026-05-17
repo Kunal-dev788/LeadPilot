@@ -8,6 +8,7 @@ import { InputField } from "@/components/shared/input-field";
 import { PasswordInput } from "@/components/shared/password-input";
 
 import { PasswordStrength } from "./password-strength";
+import { AuthRedirect } from "@/components/auth/auth-redirect";
 
 export function RegisterForm() {
   const [name, setName] = useState("");
@@ -40,64 +41,72 @@ export function RegisterForm() {
     isValidName && isValidEmail && isValidPassword && isPasswordMatched;
 
   return (
-    <form className="mt-10 space-y-6">
-      {/* NAME */}
-      <InputField
-        label="Full Name"
-        placeholder="Jane Doe"
-        icon={User}
-        value={name}
-        onChange={(e) => setName(e.target.value)}
+    <div className="flex flex-col gap-4">
+      <form className="mt-10 space-y-6">
+        {/* NAME */}
+        <InputField
+          label="Full Name"
+          placeholder="Jane Doe"
+          icon={User}
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+
+        {/* EMAIL */}
+        <InputField
+          label="Email Address"
+          type="email"
+          placeholder="jane@example.com"
+          icon={Mail}
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+
+        {/* PASSWORD */}
+        <PasswordInput
+          label="Password"
+          placeholder="Enter your password"
+          icon={Lock}
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+
+        {/* CONFIRM PASSWORD */}
+        <PasswordInput
+          label="Confirm Password"
+          placeholder="Confirm password"
+          icon={Lock}
+          value={confirmPassword}
+          onChange={(e) => setConfirmPassword(e.target.value)}
+          error={
+            confirmPassword.length > 0 && !isPasswordMatched
+              ? "Passwords do not match"
+              : undefined
+          }
+        />
+
+        {/* PASSWORD RULES */}
+        <PasswordStrength password={password} />
+
+        {/* SUBMIT */}
+        <button
+          type="submit"
+          disabled={!isFormValid}
+          className={`flex h-14 w-full items-center justify-center rounded-2xl text-sm font-semibold text-white transition-all duration-200 ${
+            isFormValid
+              ? "bg-indigo-600 hover:bg-indigo-500"
+              : "cursor-not-allowed bg-zinc-300"
+          }`}
+        >
+          Create Account
+        </button>
+      </form>
+
+      <AuthRedirect
+        text="Already have an account?"
+        linkText="Sign in"
+        href="/login"
       />
-
-      {/* EMAIL */}
-      <InputField
-        label="Email Address"
-        type="email"
-        placeholder="jane@example.com"
-        icon={Mail}
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-
-      {/* PASSWORD */}
-      <PasswordInput
-        label="Password"
-        placeholder="Enter your password"
-        icon={Lock}
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-
-      {/* CONFIRM PASSWORD */}
-      <PasswordInput
-        label="Confirm Password"
-        placeholder="Confirm password"
-        icon={Lock}
-        value={confirmPassword}
-        onChange={(e) => setConfirmPassword(e.target.value)}
-        error={
-          confirmPassword.length > 0 && !isPasswordMatched
-            ? "Passwords do not match"
-            : undefined
-        }
-      />
-
-      {/* PASSWORD RULES */}
-      <PasswordStrength password={password} />
-
-      {/* SUBMIT */}
-      <button
-        type="submit"
-        disabled={!isFormValid}
-        className={`flex h-14 w-full items-center justify-center rounded-2xl text-sm font-semibold text-white transition-all duration-200 ${
-          isFormValid
-            ? "bg-indigo-600 hover:bg-indigo-500"
-            : "cursor-not-allowed bg-zinc-300"
-        }`}
-      >
-        Create Account
-      </button>
-    </form>
+    </div>
   );
 }

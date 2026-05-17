@@ -8,7 +8,7 @@ interface AuthStatsCardProps {
   children?: ReactNode;
 }
 
-export function AuthStatsCard({
+export function SignUpStatsCard({
   title,
   value,
   subtitle,

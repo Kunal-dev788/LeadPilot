@@ -1,9 +1,9 @@
-import { AuthFloatingCards } from "./auth-floating-cards";
-import { AuthHero } from "./auth-hero";
 import { AuthLogo } from "./auth-logo";
-import { AuthTestimonial } from "./auth-testimonial";
+import { AuthHero } from "./auth-hero";
+import { SignUpFloatingCards } from "./signup-floating-cards";
+import { SignUpTestimonial } from "./signup-testimonial";
 
-export function AuthLeftPanel() {
+export function SignUpLeftPanel() {
   return (
     <aside className="relative hidden w-[42%] min-w-170 flex-col overflow-hidden bg-[#050816] px-12 py-10 text-white lg:flex">
       {/* GRID */}
@@ -18,17 +18,26 @@ export function AuthLeftPanel() {
 
         {/* HERO */}
         <div className="mt-14">
-          <AuthHero />
+          <AuthHero
+            title={
+              <>
+                Manage Leads
+                <br />
+                Smarter
+              </>
+            }
+            description="Track, organize, and convert leads with a clean modern workflow designed for high-performance sales teams."
+          />
         </div>
 
         {/* FLOATING CARDS */}
         <div className="mt-12">
-          <AuthFloatingCards />
+          <SignUpFloatingCards />
         </div>
 
         {/* TESTIMONIAL */}
         <div className="mt-auto pt-12">
-          <AuthTestimonial />
+          <SignUpTestimonial />
         </div>
       </div>
     </aside>
