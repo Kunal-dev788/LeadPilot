@@ -4,8 +4,7 @@ import { AuthStatsCard } from "./auth-stats-card";
 export function AuthFloatingCards() {
   return (
     <div className="relative h-55 w-full max-w-2xl">
-
-      <div className="absolute left-0 top-0 w-82.5">
+      <div className="absolute top-0 left-0 w-82.5">
         <AuthStatsCard
           title="Total Leads"
           value="2,845"
@@ -14,7 +13,7 @@ export function AuthFloatingCards() {
         />
       </div>
 
-      <div className="absolute bottom-0 right-0 w-90">
+      <div className="absolute right-0 bottom-0 w-90">
         <AuthStatsCard
           title="Conversion Rate"
           value="4.8%"
@@ -25,7 +24,6 @@ export function AuthFloatingCards() {
           </div>
         </AuthStatsCard>
       </div>
-
     </div>
   );
 }
