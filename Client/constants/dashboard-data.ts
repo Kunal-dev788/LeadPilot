@@ -1,4 +1,4 @@
-import { Activity } from "@/types/dashboard";
+import { Activity } from "@/features/dashboard/types/dashboard";
 
 export const salesData = [
   { week: "Week 1", revenue: 4000 },

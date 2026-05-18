@@ -8,8 +8,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "LeadPilot",
-  description: "Smart Leads CRM Dashboard",
+  title: {
+    default: "LeadPilot",
+    template: "%s | LeadPilot",
+  },
+  description: "Modern CRM Dashboard",
 };
 
 export default function RootLayout({
@@ -19,7 +22,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.variable}>{children}</body>
+      <body
+        className={`${inter.variable} bg-zinc-50 text-zinc-900 antialiased`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

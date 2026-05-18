@@ -1,5 +1,5 @@
-import { DashboardMainSection } from "@/components/dashboard/sections/dashboard-main-section";
-import { AppLayout } from "@/components/layouts/app-layout/app-layout";
+import { AppLayout } from "@/layouts/app-layout/app-layout";
+import { DashboardMainSection } from "@/features/dashboard/components/sections/dashboard-main-section";
 
 export default function DashboardPage() {
   return (

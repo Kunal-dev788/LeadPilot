@@ -1,5 +1,10 @@
-import Image from "next/image";
+import { AppLayout } from "@/layouts/app-layout/app-layout";
+import { DashboardMainSection } from "@/features/dashboard/components/sections/dashboard-main-section";
 
-export default function Home() {
-  return <h1>Hello World</h1>;
+export default function DashboardPage() {
+  return (
+    <AppLayout>
+      <DashboardMainSection />
+    </AppLayout>
+  );
 }

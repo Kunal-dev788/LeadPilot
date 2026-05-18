@@ -1,5 +1,5 @@
-import { AppLayout } from "@/components/layouts/app-layout/app-layout";
-import { LeadsOverview } from "@/components/leads/overview/leads-overview";
+import { LeadsOverview } from "@/features/leads/components/overview/leads-overview";
+import { AppLayout } from "@/layouts/app-layout/app-layout";
 
 export default function LeadsPage() {
   return (
