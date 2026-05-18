@@ -1,10 +1,10 @@
 import { DashboardMainSection } from "@/components/dashboard/sections/dashboard-main-section";
-import { DashboardLayout } from "@/components/layouts/dashboard-layout/dashboard-layout";
+import { AppLayout } from "@/components/layouts/app-layout/app-layout";
 
 export default function DashboardPage() {
   return (
-    <DashboardLayout>
+    <AppLayout>
       <DashboardMainSection />
-    </DashboardLayout>
+    </AppLayout>
   );
 }

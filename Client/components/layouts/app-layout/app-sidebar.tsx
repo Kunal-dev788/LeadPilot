@@ -4,12 +4,12 @@ import { DASHBOARD_NAVIGATION } from "@/constants/dashboard-nav";
 import { SidebarNavItem } from "./sidebar-nav-item";
 import { Logo } from "@/components/shared/logo";
 
-interface DashboardSidebarProps {
+interface AppSidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-export function DashboardSidebar({ isOpen, onClose }: DashboardSidebarProps) {
+export function AppSidebar({ isOpen, onClose }: AppSidebarProps) {
   return (
     <>
       {/* MOBILE OVERLAY */}

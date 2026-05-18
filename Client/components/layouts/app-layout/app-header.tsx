@@ -2,11 +2,11 @@
 
 import { Bell, Menu, Moon, Search, UserCircle2 } from "lucide-react";
 
-interface DashboardHeaderProps {
+interface AppHeaderProps {
   onMenuClick: () => void;
 }
 
-export function DashboardHeader({ onMenuClick }: DashboardHeaderProps) {
+export function AppHeader({ onMenuClick }: AppHeaderProps) {
   return (
     <header className="sticky top-0 z-20 border-b border-zinc-200 bg-white">
       <div className="flex h-18.5 items-center justify-between px-4 sm:px-6 lg:px-8">

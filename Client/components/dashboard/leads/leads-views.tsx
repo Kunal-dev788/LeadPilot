@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 
 import { LeadsTable } from "./leads-table";
 
-export function LeadsOverview() {
+export function LeadsViews() {
   return (
     <section className="rounded-3xl border border-zinc-200 bg-white">
       {/* HEADER */}

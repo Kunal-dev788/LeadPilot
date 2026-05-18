@@ -1,9 +1,9 @@
-import { LeadsOverview } from "../leads/leads-overview";
+import { LeadsViews } from "../leads/leads-views";
 
 export function DashboardLeadsSection() {
   return (
     <section>
-      <LeadsOverview />
+      <LeadsViews />
     </section>
   );
 }

@@ -1,5 +1,5 @@
 import { AuthLayout } from "@/components/auth/auth-layout";
-import { SignUpLeftPanel } from "@/components/auth/singup-left-panel";
+import { SignUpLeftPanel } from "@/components/auth/signup-left-panel";
 import { RegisterForm } from "@/components/forms/register/register-form";
 
 export default function RegisterPage() {
